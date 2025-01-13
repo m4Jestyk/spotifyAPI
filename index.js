@@ -8,6 +8,10 @@ const PORT = 3000;
 
 connectToDatabase();
 
+app.get("/", (req, res) => {
+    res.status(200).json("API working")
+})
+
 app.use("/api/v1/tracks", trackRouter);
 
 app.listen(PORT, () => {
